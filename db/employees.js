@@ -11,4 +11,13 @@ const employees = [
   { id: 10, name: "Gwen Grollmann" },
 ];
 
+export function getEmployee(id) {
+  return employees.find((employee) => employee.id === id);
+}
+
+export function getRandom() {
+  const randomIndex = Math.floor(Math.random() * employees.length);
+  return employees[randomIndex];
+}
+
 export default employees;
